@@ -1,0 +1,63 @@
+{
+  "sdr_configs": {
+    "sdr1": {
+      "device_id": 0,
+      "sample_rate": 2.048e6,
+      "center_freq": 100e6,
+      "gain": 20,
+      "calibration_samples": 8192,
+      "calibration_duration": 1.0,
+      "frequency_hop_interval": 0.1,
+      "buffer_size": 1024,
+      "timeout_ms": 1000
+    },
+    "sdr2": {
+      "device_id": 1,
+      "sample_rate": 2.048e6,
+      "center_freq": 100e6,
+      "gain": 20,
+      "calibration_samples": 8192,
+      "calibration_duration": 1.0,
+      "frequency_hop_interval": 0.1,
+      "buffer_size": 1024,
+      "timeout_ms": 1000
+    }
+  },
+  "calibration": {
+    "frequency_range": [50e6, 200e6],
+    "frequency_step": 5e6,
+    "noise_source_power": -20,
+    "calibration_threshold": 0.8,
+    "parallel_calibration": true,
+    "shared_calibration_data": true,
+    "precompute_matrices": true,
+    "adaptive_frequency_hopping": true,
+    "min_signal_strength": -60,
+    "max_calibration_time": 30.0
+  },
+  "optimization": {
+    "use_cached_calibration": true,
+    "cache_file": "dual_kraken_calibration_cache.json",
+    "adaptive_sample_count": true,
+    "frequency_hopping_enabled": true,
+    "background_calibration": true,
+    "cache_validity_hours": 1,
+    "enable_compression": true,
+    "parallel_processing": true
+  },
+  "hardware": {
+    "clock_splitter_enabled": true,
+    "common_noise_source": true,
+    "shared_reference_clock": true,
+    "synchronization_method": "hardware",
+    "phase_lock_loops": 2,
+    "reference_frequency": 10e6
+  },
+  "performance": {
+    "target_calibration_time": 10.0,
+    "max_memory_usage_mb": 512,
+    "cpu_cores_used": 2,
+    "enable_profiling": true,
+    "log_level": "INFO"
+  }
+}
