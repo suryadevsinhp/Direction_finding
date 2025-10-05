@@ -1,0 +1,61 @@
+{
+  "dual_sdr": {
+    "enabled": true,
+    "common_noise_source": true,
+    "clock_splitter": true,
+    "parallel_calibration": true,
+    "synchronized_clocks": true
+  },
+  "calibration": {
+    "sample_rate": 2.048e6,
+    "calibration_samples": 8192,
+    "calibration_duration": 1.0,
+    "frequency_step": 5e6,
+    "frequency_range": [50e6, 200e6],
+    "cache_enabled": true,
+    "cache_file": "/tmp/kraken_calibration_cache.json",
+    "cache_validity_hours": 1,
+    "adaptive_sampling": true,
+    "fast_frequency_hopping": true
+  },
+  "optimization": {
+    "reduce_sample_count": true,
+    "fast_frequency_hopping": true,
+    "shared_calibration_data": true,
+    "skip_clock_calibration": true,
+    "background_processing": false,
+    "memory_efficient": true,
+    "parallel_processing": true
+  },
+  "hardware": {
+    "sdr1": {
+      "device_id": 0,
+      "gain": 20,
+      "buffer_size": 1024,
+      "timeout_ms": 1000
+    },
+    "sdr2": {
+      "device_id": 1,
+      "gain": 20,
+      "buffer_size": 1024,
+      "timeout_ms": 1000
+    },
+    "clock_splitter": {
+      "enabled": true,
+      "reference_frequency": 10e6,
+      "synchronized_outputs": 2
+    },
+    "noise_source": {
+      "common": true,
+      "power_level": -20,
+      "shared_calibration": true
+    }
+  },
+  "performance": {
+    "target_calibration_time": 10.0,
+    "max_memory_usage_mb": 512,
+    "cpu_cores_used": 2,
+    "enable_profiling": true,
+    "log_level": "INFO"
+  }
+}
