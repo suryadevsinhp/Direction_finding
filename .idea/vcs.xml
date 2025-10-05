@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/krakensdr_doa/Kraken-to-TAK-Python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/krakensdr_doa/heimdall_daq_fw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/krakensdr_doa/krakensdr_doa" vcs="Git" />
+  </component>
+</project>
